@@ -1,8 +1,18 @@
-print("HELLOOOOO WORLD")
-<<<<<<< HEAD
-print("배고프다")
-=======
+from rtmbot import RtmBot
+from rtmbot.core import Plugin
+
+class HelloPlugin(Plugin):
+    def process_message(self, data):
+        print(data)
+
+
+config = {
+    "SLACK_TOKEN" : "xoxb-...",          # xoxb-...에 자신의 토큰키 입력
+    "ACTIVE_PLUGINS" : []
+}
+bot = RtmBot(config)
+bot.start()
+
+
 print("^o^ ^o^ ^o^ ^o^")
 print("배고프다")
-
->>>>>>> aae6c0fe7a549b8af90032aae3c383aac4ba7cf2
